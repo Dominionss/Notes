@@ -11,6 +11,31 @@
     <script src="{% static 'notes_app/js/script.js' %}"></script>
 </head>
 <body>
-    Hello from Notes app.
+     <div class="container">
+        <header class="header">
+            <h1 class="header__header">Note app</h1>
+        </header>
+
+        <div class="notes">
+            <div class="notes__note notes__note--count">
+                <span class="notes__text">Notes</span>
+                <span class="notes__count">2</span>
+            </div>
+
+            <div class="notes__note">
+                <h3 class="notes__note-name">Note #1</h3>
+                <ul class="notes__list">
+                    <li class="notes__list-item">One</li>
+                    <li class="notes__list-item">Two</li>
+                    <li class="notes__list-item">Three</li>
+                </ul>
+            </div>
+
+            <div class="notes__note">
+                <h3 class="notes__note-name">Second Note</h3>
+                <p class="notes__note-text">This is the second note.</p>
+            </div>
+        </div>
+    </div>
 </body>
 </html>
