@@ -13,28 +13,29 @@
 <body>
      <div class="container">
         <header class="header">
-            <h1 class="header__header">Note app</h1>
+            <h1 class="header__header">Notes app</h1>
         </header>
 
         <div class="notes">
+            {% if notes %}
+
             <div class="notes__note notes__note--count">
                 <span class="notes__text">Notes</span>
-                <span class="notes__count">2</span>
+                <span class="notes__count">{{ notes|length }}</span>
             </div>
 
-            <div class="notes__note">
-                <h3 class="notes__note-name">Note #1</h3>
-                <ul class="notes__list">
-                    <li class="notes__list-item">One</li>
-                    <li class="notes__list-item">Two</li>
-                    <li class="notes__list-item">Three</li>
-                </ul>
-            </div>
+            {% for note in notes %}
+                <div class="notes__note">
+                    <h3>{{ note.title }}</h3>
+                    <p>{{ note.text }}</p>
+                    <p><strong>Reminder:</strong> {{ note.reminder }}</p>
+                </div>
+            {% endfor %}
 
-            <div class="notes__note">
-                <h3 class="notes__note-name">Second Note</h3>
-                <p class="notes__note-text">This is the second note.</p>
-            </div>
+            {% else %}
+                <p>No notes available.</p>
+            {% endif %}
+
         </div>
     </div>
 </body>
