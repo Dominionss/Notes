@@ -88,3 +88,33 @@ body {
 .notes__note-text {
     color: var(--secondary-color);
 }
+
+.navigation {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--background-color);
+    width: 100%;
+    padding: 20px;
+}
+
+.navigation__button {
+    display: block;
+    width: 100px;
+    height: 40px;
+    background-color: var(--primary-color);
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    margin: 0 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.navigation__button:hover {
+    background-color: var(--secondary-color);
+}
+
+.navigation__button--create-note {
+    background-color: var(--accent-color);
+}

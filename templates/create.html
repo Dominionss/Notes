@@ -16,25 +16,9 @@
             <h1 class="header__header">Notes app</h1>
         </header>
 
-        <div class="notes">
-            {% if notes %}
-
-            <div class="notes__note notes__note--count">
-                <span class="notes__text">Notes</span>
-                <span class="notes__count">{{ notes|length }}</span>
-            </div>
-
-            {% for note in notes %}
-                <div class="notes__note">
-                    <h3>{{ note.title }}</h3>
-                    <p>{{ note.text }}</p>
-                    <p><strong>Reminder:</strong> {{ note.reminder }}</p>
-                </div>
-            {% endfor %}
-
-            {% else %}
-                <p>No notes available.</p>
-            {% endif %}
+        <div class="create">
+            Buttons will be here...
+        </div>
 
         </div>
 
